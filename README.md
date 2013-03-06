@@ -5,7 +5,7 @@ A general purpose, functional style to the command design pattern.
 UndoRedo.js allows you to easily create undoable actions in any javascript application.
 
 UndoRedo.do
-===
+==
 Pass in two functions, the 'do' and 'undo' functions.  UndoRedo.do will perform the 'do'
 function and push the action onto the UndoRedo stack.
     
@@ -16,13 +16,13 @@ function and push the action onto the UndoRedo stack.
     });
     
 UndoRedo.undo
-===
+==
 Undoes the last action.  Console.warns if there are no actions left to undo.
 
     UndoRedo.undo();
     
 UndoRedo.redo
-===
+==
 Redoes the last undone action.  Console.warns if there are no actions to redo.
 
     UndoRedo.redo();
