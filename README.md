@@ -4,7 +4,30 @@ UndoRedo.js
 A general purpose, functional style to the command design pattern.  
 UndoRedo.js allows you to easily create undoable actions in any javascript application.
 
-How to
+UndoRedo.do
+===
+Pass in two functions, the 'do' and 'undo' functions.  UndoRedo.do will perform the 'do'
+function and push the action onto the UndoRedo stack.
+    
+    UndoRedo.do( function() {
+        //do stuff here
+    }, function() {
+        //undo stuff here
+    });
+    
+UndoRedo.undo
+===
+Undoes the last action.  Console.warns if there are no actions left to undo.
+
+    UndoRedo.undo();
+    
+UndoRedo.redo
+===
+Redoes the last undone action.  Console.warns if there are no actions to redo.
+
+    UndoRedo.redo();
+
+Example
 ===
 When you want to perform an undoable action, you call 'do' with two functions as parameters:
 the first function performs your action.  The second function is what will be called to undo
